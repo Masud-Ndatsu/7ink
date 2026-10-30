@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { studioImages } from "@/lib/images";
+import { portraitAbout, studioImages } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -17,7 +17,9 @@ export default function About() {
           <h1 className="display" style={{ fontSize: "clamp(96px, 16vw, 240px)", lineHeight: 0.82 }}>Hope</h1>
           <p className="lede" style={{ marginTop: 32 }}>Tattoo artist and founder of 7ink.co in Karu, Abuja.</p>
         </div>
-        <div className="ph hero-art">[ Portrait of Hope ]</div>
+        <div className="ph-img hero-art">
+          <Image src={portraitAbout} alt="Portrait of Hope" fill priority sizes="(max-width: 700px) 100vw, 400px" />
+        </div>
       </section>
 
       <section className="light">

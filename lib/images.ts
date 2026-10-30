@@ -19,3 +19,6 @@ export const studioImages = [
   u("1516008684536-605574d804ce"),
   u("1785061384163-5047331060fd"),
 ];
+
+export const portraitHome = u("1542744383-8c330d91f4b1");
+export const portraitAbout = u("1586243287039-23f4c8e2e7ab");

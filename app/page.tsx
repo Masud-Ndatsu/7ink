@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { portraitHome } from "@/lib/images";
 import WorkGrid from "@/components/WorkGrid";
 import { steps, works } from "@/lib/site";
 
@@ -20,7 +22,9 @@ export default function Home() {
             <Link href="/portfolio" className="btn">See the work</Link>
           </div>
         </div>
-        <div className="ph hero-art">[ Portrait of Hope at work ]</div>
+        <div className="ph-img hero-art">
+          <Image src={portraitHome} alt="Hope tattooing at 7ink.co" fill priority sizes="(max-width: 700px) 100vw, 400px" />
+        </div>
       </section>
 
       <div aria-hidden="true" className="marquee">

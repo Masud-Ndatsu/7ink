@@ -53,6 +53,7 @@ h1, h2, h3, p { margin: 0; }
 .hero { padding-top: 72px; padding-bottom: 96px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end; }
 .hero-main { flex: 999 1 560px; min-width: 0; }
 .hero-art { flex: 1 1 320px; aspect-ratio: 4 / 5; }
+.ph-img.hero-art { aspect-ratio: 4 / 5; }
 .ph { border: 1px dashed var(--line-3); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; font-family: var(--font-mono), monospace; font-size: 13px; color: var(--dim); }
 .ph-sq { aspect-ratio: 1 / 1; padding: 0; }
 .marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
