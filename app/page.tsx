@@ -28,11 +28,17 @@ export default function Home() {
       </section>
 
       <div aria-hidden="true" className="marquee">
-        <p>
-          Fine line <span className="accent">✶</span> Blackwork <span className="accent">✶</span> Lettering{" "}
-          <span className="accent">✶</span> Cover-ups <span className="accent">✶</span> Custom pieces{" "}
-          <span className="accent">✶</span> Fine line <span className="accent">✶</span> Blackwork
-        </p>
+        <div className="marquee-track">
+          {[0, 1, 2, 3].map((n) => (
+            <p key={n}>
+              {["Fine line", "Blackwork", "Lettering", "Cover-ups", "Custom pieces"].map((t) => (
+                <span key={t}>
+                  {t} <span className="accent">✶</span>{" "}
+                </span>
+              ))}
+            </p>
+          ))}
+        </div>
       </div>
 
       <section className="wrap sec">
