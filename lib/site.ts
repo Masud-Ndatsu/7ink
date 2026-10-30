@@ -1,3 +1,5 @@
+import { workImages } from "./images";
+
 export const site = {
   name: "7ink.co",
   url: "https://7ink.co",
@@ -15,9 +17,9 @@ export const nav = [
   { href: "/aftercare", label: "Aftercare" },
 ];
 
-export type Work = { style: string; place: string };
+export type Work = { style: string; place: string; src?: string };
 
-export const works: Work[] = [
+const base: Work[] = [
   { style: "Fine line", place: "Wrist" },
   { style: "Blackwork", place: "Upper arm" },
   { style: "Lettering", place: "Collarbone" },
@@ -28,6 +30,8 @@ export const works: Work[] = [
   { style: "Custom pieces", place: "Back" },
   { style: "Lettering", place: "Ribs" },
 ];
+
+export const works: Work[] = base.map((w, i) => ({ ...w, src: workImages[i] }));
 
 export const styleNames = ["All", "Fine line", "Blackwork", "Lettering", "Cover-ups", "Custom pieces"];
 

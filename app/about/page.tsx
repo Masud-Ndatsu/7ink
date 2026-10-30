@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { studioImages } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -44,8 +46,10 @@ export default function About() {
       <section className="wrap sec">
         <h2 className="h2" style={{ marginBottom: 32 }}>The studio</h2>
         <div className="grid-cards">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className="ph ph-sq">[ Studio photo ]</div>
+          {studioImages.map((src, i) => (
+            <div key={src} className="ph-img">
+              <Image src={src} alt={`Studio photo ${i + 1}`} fill sizes="(max-width: 600px) 100vw, 400px" />
+            </div>
           ))}
         </div>
         <div className="btns" style={{ marginTop: 40 }}>
